@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './components/header';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <div className="app">
+      <Header title="Clima" />
+      </div>
+    );
+  }
 }
 
 export default App;
