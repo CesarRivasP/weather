@@ -5,11 +5,16 @@ body {
   background-color: #dfe6e9;
 }
 
+.form-container {
+  margin-left: 10;
+}
+
 nav .brand-logo {
   display: block;
   text-align: center;
   position: relative;
 }
+
 .input-field label {
   color: white;
 }
