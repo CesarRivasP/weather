@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+// import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import { makeStyles } from '@material-ui/styles';
+import Button from '@material-ui/core/Button';
 
-const styles = {
+const useStyles = makeStyles({
   headerBar: {
     backgroundColor: '#1e3799',
     color: 'white',
@@ -13,11 +15,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center'
   },
-};
+});
 
 
 const Header = (props) => {
-  const { classes, title } = props;
+  const { title } = props;
+  const classes = useStyles();
   return (
     <header>
         <AppBar position="static" color="default" className={classes.headerBar}>
@@ -30,9 +33,9 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
-  classes: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired
 };
 
 
-export default withStyles(styles)(Header);
+// export default withStyles(styles)(Header);
+export default Header;
