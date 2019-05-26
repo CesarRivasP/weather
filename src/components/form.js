@@ -3,28 +3,28 @@ import PropTypes from 'prop-types';
 
 const countrys = [
   {
-    id: 'AR',
+    id: 'ar',
     name: 'Argentina'
   }, {
-    id: 'CO',
+    id: 'co',
     name: 'Colombia'
   }, {
-    id: 'CR',
+    id: 'cr',
     name: 'Costa Rica'
   }, {
-    id: 'ES',
+    id: 'es',
     name: 'España'
   }, {
-    id: 'MX',
+    id: 'mx',
     name: 'Mexico'
   }, {
-    id: 'PE',
+    id: 'pe',
     name: 'Peru'
   }, {
-    id: 'US',
+    id: 'us',
     name: 'Estados Unidos'
   }, {
-    id: 'VE',
+    id: 've',
     name: 'Venezuela'
   }
 ];
