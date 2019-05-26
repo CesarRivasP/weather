@@ -5,7 +5,7 @@ import Form from './components/form';
 class App extends Component {
   render(){
     return (
-      <div className="container">
+      <div>
         <Header title="Clima" />
         <Form />
       </div>
