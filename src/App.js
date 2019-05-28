@@ -6,7 +6,8 @@ import Error from './components/error';
 class App extends Component {
   state = {
     error: false,
-    query: {}
+    query: {},
+    result: {}
   }
 
   componentDidUpdate(){
@@ -18,13 +19,19 @@ class App extends Component {
 
     if(!city || !country) return null;
 
-    const appId = '512fe;00c10c48f78d1c866cb80a4f7d';
-    let url = `https://samples.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${appId}`;
-    // query con fetch api
-    
-    //leer la url y agregar el api key
+    //leer la url
+    const url = `http://localhost:3002/getWeather?city=${city}&country=${country}`;
 
-    // consular con fect
+    // query con fetch api
+    fetch(url)
+     .then((response) => response.json())
+     .then((data) => {
+        console.log(data);
+        this.setState({
+          result: data
+        })
+     })
+     .catch((error) => console.log(error))
   }
 
   queryData = (response) => {
